@@ -171,18 +171,20 @@
 		border: 1px solid threeddarkshadow; 
 	}
 	
-	box, hbox, vbox, spacer {
+	.box, .hbox, .vbox, .spacer {
 	  display: flex;
 	  flex-basis: 0;
 	  white-space: pre;
 	}
 
-	hbox {
+	.hbox {
 	  flex-flow: row;
+	  border: 2px solid activeborder;
 	}
 
-	vbox {
+	.vbox {
 	  flex-flow: column;
+	  border: 2px solid activeborder;
 	}
 
 

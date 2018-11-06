@@ -108,7 +108,7 @@
 		box-sizing: content-box;
 		font-size:11px;
 	}
-	input[type="button"] {
+	input[type="button"], button {
 		padding:7px;
 		margin:11px;
 		font: small-caption;

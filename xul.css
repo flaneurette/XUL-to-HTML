@@ -132,6 +132,7 @@
 		resize: vertical;
 		width:90%;
 		margin:11px;
+		white-space: pre-line;
 	}
 	
 /* global div */

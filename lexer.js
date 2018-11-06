@@ -423,13 +423,32 @@
 		document.getElementById('data').innerHTML = data;
 	}
 	
+
+	function loadSample() {
+			
+	var sample = "<vbox class=\"cpbox\" flex=\"2\">\
+	\n\t\t\t\t\t\t\t\t<hbox flex=\"7\">\
+	\n\t\t\t\t\t\t\t\t\t<textbox id=\"Cpe\" value=\"\" multiline=\"true\" rows=\"15\" flex=\"2\"/>\
+	\n\t\t\t\t\t\t\t\t</hbox>\
+	\n\t\t\t\t\t\t\t\t<spacer flex=\"1\" />\
+	\n\t\t\t\t\t\t\t\t<hbox>\
+	\n\t\t\t\t\t\t\t\t\t<button id=\"Cpb\" class=\"Cpb\" />\
+	\n\t\t\t\t\t\t\t\t\t<button id=\"Cpb\" class=\"CplusButton\"/>\
+	\n\t\t\t\t\t\t\t\t\t\t<button id=\"Cpb\" class=\"Cpb\" />\
+	\n\t\t\t\t\t\t\t\t</hbox>\
+	\n\t\t\t\t\t\t\t\t<vbox id=\"Cp\" flex=\"1\" context=\"Context\" persist=\"sortOrder\"/>\
+	\n\t\t\t\t\t\t\t\t<hbox flex=\"5\">\
+	\n\t\t\t\t\t\t\t\t\t<textbox id=\"Cr\" value=\"\" multiline=\"true\" rows=\"14\" flex=\"2\" />\
+	\n\t\t\t\t\t\t\t\t</hbox>\
+	\n\t\t\t\t\t\t\t</vbox>";
+	document.getElementById('xulsource').innerHTML= sample.replace(/\s/g, " " ).replace(/\t/g, "    " );
+	}
+
 	function tabs(tab) {
-    var i;
+		var i;
 		var x = document.getElementsByClassName("tabs");
 		for (i = 0; i < x.length; i++) {
 		   x[i].style.display = "none";  
 		}
     document.getElementById(tab).style.display = "block";  
 	}
-
-	

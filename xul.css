@@ -75,7 +75,14 @@
 		vertical-align: baseline;
 	}
 
+	* {
+		-moz-appearance: none;
+		box-sizing: border-box;	
+	}
+	
 	body {
+		display: flex;
+		flex-direction: column;
 		background-color:#ece9d8;
 		/* 
 		foreground: f5f4f0
@@ -141,13 +148,13 @@
 		display: flex;
 	}	
 	.left {
-		width:50%;
+		width:33%;
 		border:1px;
 	}
 	
 	.right {
 		flex: 1;
-		width:50%;
+		width:67%;
 		min-height:500px;
 		border:1px;
 	}	
@@ -162,6 +169,21 @@
 		border: 1px solid threeddarkshadow; 
 	}
 	
+	box, hbox, vbox, spacer {
+	  display: flex;
+	  flex-basis: 0;
+	  white-space: pre;
+	}
+
+	hbox {
+	  flex-flow: row;
+	}
+
+	vbox {
+	  flex-flow: column;
+	}
+
+
 /* Global XUL styles */
 	
 	.menu .menuitem .menuseperator .dropdown .menubar .menulist .vbox .hbox .tabpanels 	.tabpanel .tabbox .tabs .grippy .tree .treecols .treecol .treechildren .groupbox .splitter .spring .richlistbox .richlistitem .tab .box  
@@ -206,29 +228,113 @@
 	div.split {
 
 	}
-
+	
 	#flex1 {
-	-webkit-flex: 1; 
-    -ms-flex: 1;  
-    flex: 1;
+		-webkit-flex: 1; 
+		-ms-flex: 1;  
+		flex: 1;
+		flex-grow: 1
 	}
 	#flex2 {
-	-webkit-flex: 2; 
-    -ms-flex: 2;  
-    flex: 2;
+		-webkit-flex: 2; 
+		-ms-flex: 2;  
+		flex: 2;
+		flex-grow: 2;
 	}
 	#flex3 {
-	-webkit-flex: 3; 
-    -ms-flex: 3;  
-    flex: 3;
+		-webkit-flex: 3; 
+		-ms-flex: 3;  
+		flex: 3;
+		flex-grow: 3;
 	}
 	#flex4 {
-	-webkit-flex: 4; 
-    -ms-flex: 4;  
-    flex: 4;
+		-webkit-flex: 4; 
+		-ms-flex: 4;  
+		flex: 4;
+		flex-grow: 4;
 	}
 	#flex5 {
-	-webkit-flex: 5; 
-    -ms-flex: 5;  
-    flex: 5;
+		-webkit-flex: 5; 
+		-ms-flex: 5;  
+		flex: 5;
+		flex-grow: 5;
+	}
+	#flex6 {
+		-webkit-flex: 6; 
+		-ms-flex: 6;  
+		flex: 6;
+		flex-grow: 6;
+	}
+	
+	#flex7 {
+		-webkit-flex: 7; 
+		-ms-flex: 7;  
+		flex: 7;
+		flex-grow: 7;
+	}
+	
+	#flex8 {
+		-webkit-flex: 8; 
+		-ms-flex: 8;  
+		flex: 8;
+		flex-grow: 8;
+	}
+	#flex9 {
+		-webkit-flex: 9; 
+		-ms-flex: 9;  
+		flex: 9;
+		flex-grow: 9;
+	}
+
+	#flex10 {
+		-webkit-flex: 10; 
+		-ms-flex: 10;  
+		flex: 10;
+		flex-grow: 10;
+	}
+
+	#flex11 {
+		-webkit-flex: 11; 
+		-ms-flex: 11;  
+		flex: 11;
+		flex-grow: 11;
+	}
+
+	#flex12 {
+		-webkit-flex: 12; 
+		-ms-flex: 12;  
+		flex: 12;
+		flex-grow: 12;
+	}
+
+	#flex13 {
+		-webkit-flex: 13; 
+		-ms-flex: 13;  
+		flex: 13;
+		flex-grow: 13;
+	}
+	#flex14 {
+		-webkit-flex: 14; 
+		-ms-flex: 14;  
+		flex: 14;
+		flex-grow: 14;
+	}
+	#flex15 {
+		-webkit-flex: 15; 
+		-ms-flex: 15;  
+		flex: 15;
+		flex-grow: 15;
+	}
+
+	
+	/* debug */
+	#data div:before {
+		content: attr(class);
+		font-size:11px;
+		font-variant:small-caps;
+		margin:-1px;
+		padding:1.5px;
+		background-color:light-yellow;
+		background: #fff2a8;
+		border:1px dotted #888;
 	}

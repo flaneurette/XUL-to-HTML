@@ -75,6 +75,7 @@
 			" ='" : "=\"",
 			"='" : "=\"",
 			"class=\"(.*)\" class=\"(.*)\"" : "class=\"$1 $2\"",
+			"class=\"(.*)\"(.*)class=\"(.*)\"" : "class=\"$1 $3\" $2",
 			"class\"(.*)\" class=\"(.*)\"" : "class=\"$1 $2\"",
 			"broadcast" : "onbroadcast",
 			"close" : "onclose",

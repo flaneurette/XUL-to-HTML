@@ -4,14 +4,25 @@
 <head>
   <meta charset="utf-8">
   <title>XUL to HTML converter</title>
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="xul.css">
 </head>
 
 <body>
   <script src="lexer.js"></script>
-  <h1>Paste XUL source code.</h1>
-  <textarea name="" id="xulsource" cols="120" rows="40"></textarea>
-  <hr />
-  <input type="button" value="Convert to HTML" onclick="lexer();"/>
+  
+  <div class="center">
+  
+	  <div class="left">
+	  <h1>Paste XUL source code.</h1>
+	  <textarea name="" id="xulsource" rows="40"></textarea>
+	  <br/>
+	  <input type="button" value="Convert to HTML" onclick="lexer();"/>
+	  </div>
+	  <div class="right">
+	   <h1>Result.</h1>
+	  <div id="data"></div>
+	  </div>
+  </div>
+  
 </body>
 </html>

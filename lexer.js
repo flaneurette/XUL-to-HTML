@@ -1,8 +1,21 @@
-
+	
 	function lexer() {
 		
 			var xulelements = {
+			"<.*xml version=\"1.0\" \?>" : "",	
+			"<.*xml-(.*)>" : "",
+			"<.*xml version(.*)>" : "",
+			"<!DOCTYPE(.*)>" : "<!DOCTYPE HTML>",
+			"<window(.*)>" : "",
+			"</window>" : "",
+			"xmlns:html=\"http://www.w3.org/1999/xhtml\"" : "",
+			"xmlns=\"http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul\"" : "",
+			"xmlns=\"https://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul\"" : "",
+			"persist=\".*\"" : "",
 			"chrome://" : "./",
+			"<script(.*)>" : "<script$1></script>",
+			"<overlay" : "<div id=\"overlay\" " ,
+			"</overlay>" : "",
 			"<menu " : "<ul class=\"menu\" ",
 			"<menuitem " : "<li class=\"menuitem\" ",
 			"<menuseparator />" : "<li class=\"menuseperator\"></li>",
@@ -46,7 +59,7 @@
 			"</richlistitem>" : "</div>",
 			"<tab" : "<div class=\"tab\"",
 			"</tab>" : "</div>",
-			"flex=\"" : "class=\"flex",
+			"flex=\"" : "id=\"flex",
 			"oncommand" : "onclick",
 			"<box" : "<div class=\"box\"",
 			"</box>" : "</div>",
@@ -56,7 +69,17 @@
 	
 		var sourcecode = document.getElementById('xulsource').value;
 			for (var v in xulelements) {
-				sourcecode = sourcecode.replace(new RegExp(v, "g"), xulelements[v]);
+				sourcecode = sourcecode.replace(new RegExp(v, "gim"), xulelements[v]);
 			}
 		document.getElementById('xulsource').value = sourcecode;
+		
+		writeFrame('iframe',sourcecode);
 	}
+	
+	function writeFrame(id,data) {
+		document.getElementById('data').innerHTML = data;
+	}
+	
+
+	
+	

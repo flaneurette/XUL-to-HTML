@@ -9,7 +9,7 @@ The converter has a short list of most used XUL tags that will be converted to D
 
 Todo
 ----
-Currently there is no replacement for styling the converted markup. We need CSS emulation of the XUL elements and JavaScript emulation for the attributes.
+Currently there is no replacement for styling the converted markup. We need CSS emulation of the XUL elements and JavaScript emulation for the attributes. Feel free to contribute.
 
 Demo
 ----

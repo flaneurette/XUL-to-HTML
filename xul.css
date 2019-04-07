@@ -1,4 +1,7 @@
 /* 
+	
+	We try to emulate XUL styling, but we must respect the system's user-theme. 
+	A rather challeging compromise, because we cannot fully emulate XUL due to OS, browser, and system differences.
 
 	System CSS- respecting the user-theme. 
 	

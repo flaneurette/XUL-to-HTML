@@ -1,6 +1,9 @@
 	
 	function lexer() {
 		
+			// The order of the Regular Expressions in the list is important! 
+			// *do not change the position* Append addtional RegExp's if you found some missing elements.
+		
 			var xulelements = {
 			"=\"&(.*)\.label;\"" : "=\"$1\"",
 			"=\"&(.*)\.(.*);\"" : "=\"$1.$2\"",
@@ -49,7 +52,7 @@
 			"</treechildren>" : "</div>",
 			"<groupbox" : "<div class=\"groupbox\"",
 			"</groupbox>" : "</div>",
-			"<splitter" : "div class=\"splitter\"",
+			"<splitter" : "<div class=\"splitter\"",
 			"</splitter>" : "</div>",
 			"<spring" : "<div class=\"spring\"",
 			"<findbar" : "<input",
